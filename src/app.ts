@@ -1,12 +1,13 @@
 import cors from "cors";
 import express, { Request, Response } from "express";
+import { ProductRoutes } from "./modules/Product/product.route";
 
 const app = express();
 
 // parser
-// app.use(express.json());
+app.use(express.json());
 
-// app.use("/api/movies", MovieRoutes);
+app.use("/api/products", ProductRoutes);
 
 //const port = 3000;
 app.use(cors());
